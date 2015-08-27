@@ -15,17 +15,13 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.daimajia.androidanimations.library.Techniques;
-import com.daimajia.androidanimations.library.YoYo;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
-import com.nineoldandroids.animation.Animator;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
@@ -148,36 +144,10 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         if (fromAutoComplete.getText().length() > 3 && toAutoComplete.getText().length() > 3) {
             if (searchButton.getVisibility() == View.GONE) {
                 searchButton.setVisibility(View.VISIBLE);
-                YoYo.with(Techniques.FadeIn)
-                        .duration(200)
-                        .playOn(searchButton);
             }
         } else {
             if (searchButton.getVisibility() == View.VISIBLE) {
-                YoYo.with(Techniques.FadeOut)
-                        .duration(200)
-                        .withListener(new Animator.AnimatorListener() {
-                            @Override
-                            public void onAnimationStart(Animator animation) {
-
-                            }
-
-                            @Override
-                            public void onAnimationEnd(Animator animation) {
-                                searchButton.setVisibility(View.GONE);
-                            }
-
-                            @Override
-                            public void onAnimationCancel(Animator animation) {
-
-                            }
-
-                            @Override
-                            public void onAnimationRepeat(Animator animation) {
-
-                            }
-                        })
-                        .playOn(searchButton);
+                searchButton.setVisibility(View.GONE);
             }
 
         }
