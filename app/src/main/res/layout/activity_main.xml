@@ -62,7 +62,6 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/default_margin"
             android:layout_marginLeft="@dimen/default_margin"
-            android:background="@color/common_signin_btn_dark_text_disabled"
             android:layout_centerHorizontal="true"
             android:layout_alignBottom="@+id/departureDatePicker" />
 
