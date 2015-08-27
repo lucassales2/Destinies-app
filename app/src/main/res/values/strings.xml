@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GoEuro</string>
+    <string name="action_settings">Settings</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="datepickerTitle1">Departure</string>
+    <string name="datepickerTitle2">Return</string>
+</resources>

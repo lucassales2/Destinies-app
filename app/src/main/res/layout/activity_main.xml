@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="One way" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/default_margin"
+        android:text="@string/from"
+        android:textSize="@dimen/textsize_large" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/default_margin"
+        android:singleLine="true"
+        android:textSize="@dimen/textsize_normal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/default_margin"
+        android:text="@string/to"
+        android:textSize="@dimen/textsize_large" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/default_margin"
+        android:singleLine="true"
+        android:textSize="@dimen/textsize_normal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:id="@+id/departureDatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/divider"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/datepickerTitle1" />
+
+            <TextView
+                android:id="@+id/departure_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/default_margin"
+                android:paddingTop="@dimen/default_margin" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/returnDatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/divider"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/datepickerTitle2" />
+
+            <TextView
+                android:id="@+id/return_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/default_margin"
+                android:paddingTop="@dimen/default_margin" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:background="@drawable/button_background"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:padding="@dimen/default_margin"
+        android:text="Search"
+        android:visibility="gone"
+        android:textColor="@android:color/white" />
+</LinearLayout>
