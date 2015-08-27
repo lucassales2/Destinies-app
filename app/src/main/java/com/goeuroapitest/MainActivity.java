@@ -13,6 +13,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.DatePicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
@@ -76,6 +77,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
 
         updateDepartureDate();
         updateReturnDate();
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, R.string.search_not_implemented, Toast.LENGTH_LONG).show();
+            }
+        });
 
         departureTextView.setOnClickListener(new View.OnClickListener() {
             @Override

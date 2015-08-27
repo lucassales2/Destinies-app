@@ -16,6 +16,11 @@
         android:checked="true"
         android:text="One way" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/common_signin_btn_dark_text_disabled"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,7 +50,6 @@
         android:padding="@dimen/default_margin"
         android:singleLine="true"
         android:textSize="@dimen/textsize_normal" />
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,9 +58,13 @@
 
         <View
             android:id="@+id/divider"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_centerInParent="true" />
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:background="@color/common_signin_btn_dark_text_disabled"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBottom="@+id/departureDatePicker" />
 
         <LinearLayout
             android:id="@+id/departureDatePicker"
@@ -68,12 +76,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize_small"
                 android:text="@string/datepickerTitle1" />
 
             <TextView
                 android:id="@+id/departure_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize_normal_small"
                 android:paddingBottom="@dimen/default_margin"
                 android:paddingTop="@dimen/default_margin" />
         </LinearLayout>
@@ -89,6 +99,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize_small"
                 android:text="@string/datepickerTitle2" />
 
             <TextView
@@ -96,9 +107,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="@dimen/default_margin"
+                android:textSize="@dimen/textsize_normal_small"
                 android:paddingTop="@dimen/default_margin" />
         </LinearLayout>
     </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_height="1dp"
+        android:background="@color/common_signin_btn_dark_text_disabled"/>
 
     <Button
         android:id="@+id/search_button"

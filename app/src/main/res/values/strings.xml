@@ -5,4 +5,5 @@
     <string name="to">To</string>
     <string name="datepickerTitle1">Departure</string>
     <string name="datepickerTitle2">Return</string>
+    <string name="search_not_implemented">Search is not yet implemented</string>
 </resources>
